@@ -70,3 +70,44 @@ if (contactForm) {
   });
 })();
 
+
+
+
+// Typewriter effect with limited cursor blinking
+(function(){
+  const descEl = document.querySelector('.description');
+  if (!descEl) return;
+
+  const fullText = descEl.textContent.trim();
+  descEl.textContent = '';
+  let index = 0;
+
+  // Start cursor blinking
+  descEl.classList.add('blink-cursor');
+
+  function typeChar() {
+    if (index < fullText.length) {
+      descEl.textContent += fullText.charAt(index);
+      index++;
+      setTimeout(typeChar, 80); // typing speed
+    } else {
+      // After typing is done, count blinks and stop
+      let blinkCount = 0;
+      const maxBlinks = 6;
+      const blinkInterval = 800; // must match CSS blink speed (0.8s)
+
+      const interval = setInterval(() => {
+        blinkCount++;
+        if (blinkCount >= maxBlinks) {
+          clearInterval(interval);
+          descEl.classList.remove('blink-cursor'); // stop blinking
+          descEl.style.borderRight = 'none'; // hide cursor
+        }
+      }, blinkInterval);
+    }
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(typeChar, 800);
+  });
+})();

@@ -18,6 +18,8 @@ header {
   position: relative;
 }
 
+
+
 /* Intro state: show only hero, lock scroll */
 html.intro, body.intro {
   height: 100vh;
@@ -29,6 +31,27 @@ nav a {
   margin: 0 1rem;
   text-decoration: none;
 }
+
+
+/* Typewriter effect styles */
+.description {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent, #59a9ff);
+}
+
+.blink-cursor {
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { border-color: var(--accent, #59a9ff); }
+  51%, 100% { border-color: transparent; }
+}
+
+
+
 /* Hamburger button */
 .hamburger {
   position: absolute;
@@ -130,8 +153,9 @@ main {
 }
 
 section {
-  padding: 1.5rem 0; /* remove card background; spacing only */
+  padding: 60px 0;   /* top & bottom padding */
 }
+
 
 .title-box {
   display: block;
@@ -296,9 +320,48 @@ footer {
   margin-top: 0.5rem;
 }
 
-.about-photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 8px;
-  object-fit: cover;
+ .about-photo {
+   width: 220px;
+   height: 220px;
+   border-radius: 8px;
+   object-fit: cover;
+ }
+
+ /* Contact info layout */
+ .contact-info {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 1.5rem;
+   margin-top: 0.5rem;
+ }
+
+ .contact-item h3 {
+   margin: 0 0 0.5rem 0;
+   color: #94a3b8;
+   font-size: 1rem;
+ }
+
+ .contact-item a {
+   color: #94bdf4;
+   text-decoration: none;
+ }
+
+ .contact-item a:hover {
+   text-decoration: underline;
+ }
+
+
+
+
+ /* mobile use balance */
+ .section-spacing {
+  padding: 80px 0;
 }
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 50px 0;
+  }
+}
+
+
