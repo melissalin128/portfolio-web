@@ -1,8 +1,33 @@
-const contactForm = document.querySelector("form");
+const contactForm = document.getElementById("contactForm");
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  const statusEl = document.getElementById("contactStatus");
+  const serviceId = contactForm.getAttribute('data-emailjs-service');
+  const templateId = contactForm.getAttribute('data-emailjs-template');
+  const publicKey = contactForm.getAttribute('data-emailjs-public');
+
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    alert("Thank you for contacting me! 📬");
+    if (!window.emailjs) {
+      statusEl.textContent = "Email service unavailable. Please try again later.";
+      return;
+    }
+    if (!serviceId || !templateId || !publicKey) {
+      statusEl.textContent = "EmailJS not configured. Add your IDs to the form.";
+      return;
+    }
+    statusEl.textContent = "Sending...";
+    try {
+      const formData = {
+        from_name: contactForm.name.value,
+        reply_to: contactForm.email.value,
+        message: contactForm.message.value
+      };
+      await window.emailjs.send(serviceId, templateId, formData, { publicKey });
+      statusEl.textContent = "Thanks! Your message was sent.";
+      contactForm.reset();
+    } catch (err) {
+      statusEl.textContent = "Sorry, something went wrong. Please try again.";
+    }
   });
 }
 

@@ -38,6 +38,7 @@
     <a href="#involvements">Other Involvements</a>
     <a href="#about">About</a>
     <a href="#story">My Story to Data Science</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -130,12 +131,36 @@
           building models and communicating results that matter.
         </p>
       </section>
+
+      <section id="contact" class="reveal">
+        <h2 class="title-box">Contact Me</h2>
+        <p>
+          Your message will be automatically sent to melissalin128@gmail.com
+        </p>
+        <form id="contactForm" data-emailjs-service="service_8k5tus8" data-emailjs-template="template_ej2t587" data-emailjs-public="tHkuG0GsoWePQliGJ">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+          <p id="contactStatus" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
 
     <footer>
       <p>Built by Melissa Lin © 2025</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function(){
+        if (window.emailjs) {
+          // Optionally init with public key to optimize later calls; we also pass it per-send
+          // Replace 'YOUR_PUBLIC_KEY' below once you add your real key
+          try { window.emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' }); } catch(e) {}
+        }
+      })();
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
