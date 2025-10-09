@@ -34,6 +34,12 @@ if (contactForm) {
     }
   });
 
+  // Close with back arrow button inside the drawer
+  const backBtn = drawer.querySelector('.drawer-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => setOpen(false));
+  }
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') setOpen(false);
   });
