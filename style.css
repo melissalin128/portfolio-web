@@ -250,6 +250,60 @@ footer {
   transition: opacity 200ms ease;
 }
 
+
+
+.resume-btn-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 80px; /* pushes down to separate from Skills section */
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-family: 'Prata', serif;
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.resume-btn:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.resume-btn:active {
+  transform: scale(0.98);
+}
+
+.resume-btn-nav {
+  display: block;
+  margin-top: 2rem;
+  padding: 0.85rem 1.25rem;
+  background: #59a9ff; /* accent color */
+  color: #0e141b;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 700;
+  font-family: 'Prata', serif;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(89,169,255,0.4);
+}
+
+.resume-btn-nav:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(89,169,255,0.6);
+}
+
+
 /* Skills two-column list */
 .skills-list {
   columns: 2;
@@ -365,3 +419,14 @@ footer {
 }
 
 
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

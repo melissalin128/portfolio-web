@@ -21,6 +21,15 @@
       <span class="description">Bilingual Data Scientist & Storyteller</span>
     </h1>
   </div>
+ 
+
+  <!-- Resume button -->
+  <div class="resume-btn-container">
+    <a href="Melissa Lin Resume 2025.pdf" class="resume-btn" download>Download My Resume
+    </a>
+  </div>
+  
+
   <button id="menuButton" class="hamburger" aria-label="Open menu" aria-controls="siteMenu" aria-expanded="false">
     <span></span>
     <span></span>
@@ -32,19 +41,21 @@
         <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
+    <a href="Melissa_Lin_Resume.pdf" class="resume-btn-nav" download>
+      📄 Download Resume
+    </a>
     <a href="#skills">Skills &amp; Tools</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#involvements">Other Involvements</a>
     <a href="#about">About</a>
     <a href="#story">My Story to Data Science</a>
-    <a href="#messageme">Send Me A Message</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
     <main>
-      <section id="skills" class="reveal">
+      <section id="skills" class="section-spacing fade-in">
         <h2 class="title-box">Skills &amp; Tools</h2>
         <ul class="skills-list">
           <li>Python</li>
@@ -58,7 +69,7 @@
         </ul>
       </section>
 
-      <section id="experience" class="reveal">
+      <section id="experience" class="section-spacing fade-in">
         <h2 class="title-box">Experience</h2>
         <article class="xp-item">
           <h3>Data Analyst <span class="company">Acme Corp</span></h3>
@@ -80,7 +91,7 @@
         </article>
       </section>
 
-      <section id="projects" class="reveal">
+      <section id="projects" class="section-spacing fade-in">
         <h2 class="title-box">Projects</h2>
         <div class="projects">
           <article class="project">
@@ -101,7 +112,7 @@
         </div>
       </section>
 
-      <section id="involvements" class="reveal">
+      <section id="involvements" class="section-spacing fade-in">
         <h2 class="title-box">Other Involvements</h2>
         <article class="xp-item">
           <h3>Volunteer Data Mentor <span class="company">Community Org</span></h3>
@@ -113,7 +124,7 @@
         </article>
       </section>
 
-      <section id="about" class="reveal">
+      <section id="about" class="section-spacing fade-in">
         <h2 class="title-box">About</h2>
         <div class="about">
           <img class="about-photo" src="melissa.jpg" alt="Photo of Melissa Lin" />
@@ -124,7 +135,7 @@
         </div>
       </section>
 
-      <section id="story" class="reveal">
+      <section id="story" class="section-spacing fade-in">
         <h2 class="title-box">My Story to Data Science</h2>
         <p>
           My journey began with curiosity about how decisions are made. I explored
@@ -133,7 +144,7 @@
         </p>
       </section>
 
-      <section id="contact" class="reveal">
+      <section id="contact" class="section-spacing fade-in">
         <h2 class="title-box">Contact</h2>
         <div class="contact-info">
           <div class="contact-item">
@@ -153,10 +164,8 @@
             <a href="https://github.com/melissalin128" target="_blank" rel="noopener">github.com/melissalin128</a>
           </div>
         </div>
-      </section>
-
-      <section id="messageme" class="reveal">
-        <h2 class="title-box">Send Me A Message</h2>
+        <br>
+        <br>
         <form id="contactForm" data-emailjs-service="service_8k5tus8" data-emailjs-template="template_ej2t587" data-emailjs-public="tHkuG0GsoWePQliGJ">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
@@ -165,6 +174,7 @@
           <p id="contactStatus" aria-live="polite"></p>
         </form>
       </section>
+
     </main>
 
     <footer>
@@ -177,7 +187,7 @@
         if (window.emailjs) {
           // Optionally init with public key to optimize later calls; we also pass it per-send
           // Replace 'YOUR_PUBLIC_KEY' below once you add your real key
-          try { window.emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' }); } catch(e) {}
+          try { window.emailjs.init({ publicKey: 'tHkuG0GsoWePQliGJ' }); } catch(e) {}
         }
       })();
     </script>
