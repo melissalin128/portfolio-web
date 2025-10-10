@@ -376,7 +376,7 @@ footer {
 }
 
 .project a {
-  color: #94bdf4;
+  color: #59a9ff;
   text-decoration: none;
 }
 
@@ -385,7 +385,7 @@ footer {
 }
 
 .project-stack {
-  color: #94a3b8;
+  color: #94bdf4;
   font-size: 0.75rem;
   margin: 0.25rem 0 0.5rem 0;
 }
@@ -479,6 +479,143 @@ footer {
    text-decoration: underline;
  }
 
+
+ /* contact form */
+
+ #contactForm input,
+ #contactForm textarea {
+   background-color: #e8e4e4; /* same color as footer */
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   width: 100%;
+   margin-bottom: 10px;
+ }
+ 
+ #contactForm input:focus,
+ #contactForm textarea:focus {
+   background-color: #d1cdcd; /* slightly darker on focus */
+   outline: none;
+ }
+ 
+ #contactForm input,
+ #contactForm textarea {
+   font-family: inherit;
+ }
+
+ #contactForm button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #59a9ff; /* or your preferred color */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: #94bdf4; 
+}
+ 
+#contactForm {
+  max-width: 200px;   /* or whatever width you like */
+  margin: 0 auto;     /* center it horizontally */
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  width: 100%;
+  box-sizing: border-box; /* makes padding count inside the width */
+}
+
+
+
+/*essen*/
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem; /* space between columns */
+  flex-wrap: wrap; /* makes it stack on smaller screens */
+}
+
+.contact-info {
+  flex: 1;           /* left column takes up 1 part */
+  min-width: 250px;  /* ensures it doesn't shrink too much */
+}
+
+#contactForm {
+  flex: 1;           
+  min-width: 300px;
+  max-width: 500px;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: make contact info look nice */
+.contact-item {
+  margin-bottom: 1rem;
+}
+
+
+/*test*/
+/* Outer two-column layout */
+.contact-container{
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap; /* will stack on small screens */
+}
+
+/* LEFT column: vertical stack (grid of links + resume below) */
+.contact-info{
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column; /* ensures resume stays below the grid */
+}
+
+/* 2x2 grid for the 4 links */
+.contact-links{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* spacing for each contact item */
+.contact-item h3 { margin: 0 0 0.25rem 0; font-size: 0.95rem; }
+.contact-item a { font-size: 0.85rem; text-decoration: none; }
+
+
+/* RIGHT column (form) */
+#contactForm{
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+/* Make form elements full width and consistent */
+#contactForm input,
+#contactForm textarea,
+#contactForm button{
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* optional: mobile stacking */
+@media (max-width: 800px){
+  .contact-container{ flex-direction: column; }
+  .contact-info, #contactForm{ min-width: 100%; }
+}
+/* idk what is going on above*/
 
 
 

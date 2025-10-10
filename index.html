@@ -41,7 +41,7 @@
         <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
-    <a href="Melissa_Lin_Resume.pdf" class="resume-btn-nav" download>
+    <a href="Melissa Lin Resume 2025.pdf" class="resume-btn-nav" download>
       📄 Download Resume
     </a>
     <a href="#skills">Skills & Tools</a>
@@ -160,35 +160,47 @@
 
       <section id="contact" class="section-spacing fade-in">
         <h2 class="title-box">Get In Touch</h2>
-        <div class="contact-info">
-          <div class="contact-item">
-            <h3>Email 📧</h3>
-            <a href="mailto:melissalin128@gmail.com">melissalin128@gmail.com</a>
+      
+        <div class="contact-container">
+          <!-- LEFT COLUMN -->
+          <div class="contact-info">
+            <div class="contact-links">
+              <div class="contact-item">
+                <h3>Email 📧</h3>
+                <a href="mailto:melissalin128@gmail.com">melissalin128@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <h3>Phone 📞</h3>
+                <a href="tel:+1234567890">(480) 332-4077</a>
+              </div>
+              <div class="contact-item">
+                <h3>LinkedIn 💻</h3>
+                <a href="https://linkedin.com/in/melissalin128" target="_blank" rel="noopener">linkedin.com/in/melissalin128</a>
+              </div>
+              <div class="contact-item">
+                <h3>GitHub 👩🏻‍💻</h3>
+                <a href="https://github.com/melissalin128" target="_blank" rel="noopener">github.com/melissalin128</a>
+              </div>
+            </div>
+      
+            <!-- Resume button sits BELOW the grid -->
+            <div class="resume-btn-container">
+              <a href="Melissa Lin Resume 2025.pdf" class="resume-btn" download>Download My Resume</a>
+            </div>
           </div>
-          <div class="contact-item">
-            <h3>Phone 📞</h3>
-            <a href="tel:+1234567890">(480) 332-4077</a>
-          </div>
-          <div class="contact-item">
-            <h3>LinkedIn 💻</h3>
-            <a href="https://linkedin.com/in/melissalin128" target="_blank" rel="noopener">linkedin.com/in/melissalin128</a>
-          </div>
-          <div class="contact-item">
-            <h3>GitHub 👩🏻‍💻</h3>
-            <a href="https://github.com/melissalin128" target="_blank" rel="noopener">github.com/melissalin128</a>
-          </div>
+      
+          <!-- RIGHT COLUMN -->
+          <form id="contactForm" data-emailjs-service="service_8k5tus8" data-emailjs-template="template_ej2t587" data-emailjs-public="tHkuG0GsoWePQliGJ">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <p id="contactStatus" aria-live="polite"></p>
+          </form>
         </div>
-        <br>
-        <br>
-        <form id="contactForm" data-emailjs-service="service_8k5tus8" data-emailjs-template="template_ej2t587" data-emailjs-public="tHkuG0GsoWePQliGJ">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-          <p id="contactStatus" aria-live="polite"></p>
-        </form>
       </section>
-
+      
+  
     </main>
 
     <footer>
