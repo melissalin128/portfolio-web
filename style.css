@@ -156,19 +156,25 @@ section {
   padding: 60px 0;   /* top & bottom padding */
 }
 
-
+/* title format */
 .title-box {
   display: block;
   margin: 0 0 1rem 0;
-  font-size: 16;
-  font-weight: 100;
+  font-size: 1.25rem;  
+  font-weight: 800;
   letter-spacing: 0.02em;
-  color: #94a3b8;
+  color: white; /*#94a3b8; */
   text-shadow:
     0 2px 0 rgba(0,0,0,0.12),
     0 4px 8px rgba(0,0,0,0.25); /* soft depth */
-  font-family: 'Abril Fatface', Georgia, 'Times New Roman', serif;
+  font-family: 'Abril Fatface', Georgia, 'Times New Roman', serif;;
 }
+
+
+.section-spacing h2.title-box {
+  margin-bottom: 1.5rem;  /* adds breathing room below the header */
+}
+
 
 form input, form button {
   display: block;
@@ -325,17 +331,36 @@ footer {
 
 .xp-item h3 {
   margin: 0.5rem 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #59a9ff; /* this will style the title */
 }
 
 .xp-item .company {
   font-weight: 500;
   opacity: 0.9;
+  font-style: italic;
+  color: #94a3b8;
 }
 
 .xp-item .dates {
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 0.5rem;
+}
+
+.xp-item .location {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.xp-item .dates .location {
+  margin-left: 2em; /* tab between dates and location */
+}
+
+.xp-item .company {
+  margin-left: 2em; 
 }
 
 /* Projects layout */
@@ -380,6 +405,56 @@ footer {
    border-radius: 8px;
    object-fit: cover;
  }
+
+
+/* second page more about */
+
+ .more-about-link {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.more-about-link a {
+  color: #59a9ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin: 0 0.75rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.more-about-link a:hover {
+  color: #94bdf4;
+}
+
+.more-about-link a:active {
+  color: #ffffff;
+}
+
+
+/* back button on background page */
+.back-button {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(148,163,184,0.35);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #59a9ff;
+  color: #0e141b;
+}
+
+
+
+
 
  /* Contact info layout */
  .contact-info {
@@ -429,4 +504,123 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* Background page */
+
+.background-title {
+  font-size: 2.2rem;
+  display: block;
+  margin: 0 0 1rem 0; 
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #94a3b8;
+  text-shadow:
+    0 2px 0 rgba(0,0,0,0.12),
+    0 4px 8px rgba(0,0,0,0.25); /* soft depth */
+  font-family: 'Abril Fatface', Georgia, 'Times New Roman', serif;
+}
+
+.background-item {
+  margin-top: 1rem;
+}
+
+
+.background-item h3 {
+  margin: 0.5rem 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #59a9ff; /* this will style the title */
+}
+
+.background-item h3 .school {
+  /*color: #94a3b8; /* or whatever your neutral text color is */
+  font-weight: 500;
+  opacity: 0.9;
+  font-style: italic;
+  color: #94a3b8;
+}
+
+.background-item .dates {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.background-item .location {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.background-item .dates .location {
+  margin-left: 2em; /* tab between dates and location */
+}
+
+.background-item .school {
+  margin-left:2em;
+}
+
+
+.background-item ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.background-item li {
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+
+/* add subsections to About in navigation pane */
+.drawer-about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between link and arrow */
+}
+
+.drawer-about-link {
+  flex: 1;
+  text-decoration: none;
+  color: #94a3b8;
+  font-family: 'Prata', serif;
+  font-weight: 500;
+}
+
+.drawer-about-link:hover {
+  color: #59a9ff;
+}
+
+.drawer-submenu-arrow {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-family: 'Prata', serif;
+  font-weight: 600;
+}
+
+.drawer-submenu-arrow:hover {
+  color: #59a9ff;
+}
+
+.drawer-submenu {
+  display: none;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  gap: 0.5rem;
+}
+
+.drawer-submenu a {
+  text-decoration: underline;
+  font-family: 'Prata', serif;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.drawer-submenu a:hover {
+  color: #59a9ff;
 }

@@ -44,13 +44,24 @@
     <a href="Melissa_Lin_Resume.pdf" class="resume-btn-nav" download>
       📄 Download Resume
     </a>
-    <a href="#skills">Skills &amp; Tools</a>
+    <a href="#skills">Skills & Tools</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#involvements">Other Involvements</a>
-    <a href="#about">About</a>
-    <a href="#story">My Story to Data Science</a>
-    <a href="#contact">Contact</a>
+
+
+  <div class="drawer-about-wrapper">
+    <a href="#about" class="drawer-about-link">About</a>
+    <button id="aboutToggle" class="drawer-submenu-arrow" aria-expanded="false">▾</button>
+  </div>
+
+  <div id="aboutSubmenu" class="drawer-submenu" aria-hidden="true">
+    <a href="background.html#story">My Story to Data Science</a>
+    <a href="background.html#academic">Academic</a>
+    <a href="background.html#involvement">Other Involvements</a>
+    <a href="background.html#awards">Awards</a>
+  </div>
+
+    <a href="#contact">Get In Touch</a>
   </nav>
 </header>
 
@@ -60,20 +71,29 @@
         <ul class="skills-list">
           <li>Python</li>
           <li>SQL</li>
+          <li>R</li>
           <li>Pandas</li>
           <li>NumPy</li>
           <li>Scikit-learn</li>
           <li>TensorFlow / PyTorch</li>
-          <li>Data Visualization (Matplotlib, Seaborn, Plotly)</li>
-          <li>Version Control (Git)</li>
+          <li>Matplotlib, Seaborn, Plotly</li>
+          <li>Version Control (Git/Github)</li>
+          <li>Data Visualization (Tableau, PowerBI)</li>
+
         </ul>
       </section>
 
       <section id="experience" class="section-spacing fade-in">
         <h2 class="title-box">Experience</h2>
         <article class="xp-item">
-          <h3>Data Analyst <span class="company">Acme Corp</span></h3>
-          <div class="dates">Jan 2023 – Present</div>
+          <h3>
+            Data Science and Analytics Intern
+            <span class="company">Acme Corp</span>
+          </h3>
+                    <div class="dates">
+            Sep 2021 – Dec 2022
+            <span class="location">Arizona, USA</span>
+          </div>
           <ul>
             <li>Built dashboards to track KPIs and trends.</li>
             <li>Wrote SQL to analyze large datasets.</li>
@@ -81,8 +101,14 @@
           </ul>
         </article>
         <article class="xp-item">
-          <h3>Research Assistant <span class="company">State University</span></h3>
-          <div class="dates">Sep 2021 – Dec 2022</div>
+          <h3>
+            Undergraduate Data Science Researcher
+            <span class="company">Acme Corp</span>
+          </h3>
+                    <div class="dates">
+            Sep 2021 – Dec 2022
+            <span class="location">Arizona, USA</span>
+          </div>          
           <ul>
             <li>Cleaned and prepared data for modeling.</li>
             <li>Ran experiments and documented results.</li>
@@ -112,17 +138,6 @@
         </div>
       </section>
 
-      <section id="involvements" class="section-spacing fade-in">
-        <h2 class="title-box">Other Involvements</h2>
-        <article class="xp-item">
-          <h3>Volunteer Data Mentor <span class="company">Community Org</span></h3>
-          <div class="dates">2024 – Present</div>
-          <ul>
-            <li>Mentored learners on Python and data fundamentals.</li>
-            <li>Reviewed projects and provided career guidance.</li>
-          </ul>
-        </article>
-      </section>
 
       <section id="about" class="section-spacing fade-in">
         <h2 class="title-box">About</h2>
@@ -133,34 +148,33 @@
             I enjoy analytics, ML, and storytelling with data.
           </p>
         </div>
+        <br>
+        <div class="more-about-link">Curious about my background? Read more →
+          <a href="background.html#story">My Story to Data Science</a>
+          <a href="background.html#academic">Academic</a>
+          <a href="background.html#involvements">Other Involvements</a>
+          <a href="background.html#awards">Awards</a>
+        </div>
       </section>
 
-      <section id="story" class="section-spacing fade-in">
-        <h2 class="title-box">My Story to Data Science</h2>
-        <p>
-          My journey began with curiosity about how decisions are made. I explored
-          statistics, coding, and real-world datasets, discovering a passion for
-          building models and communicating results that matter.
-        </p>
-      </section>
 
       <section id="contact" class="section-spacing fade-in">
-        <h2 class="title-box">Contact</h2>
+        <h2 class="title-box">Get In Touch</h2>
         <div class="contact-info">
           <div class="contact-item">
-            <h3>Email</h3>
+            <h3>Email 📧</h3>
             <a href="mailto:melissalin128@gmail.com">melissalin128@gmail.com</a>
           </div>
           <div class="contact-item">
-            <h3>Phone</h3>
+            <h3>Phone 📞</h3>
             <a href="tel:+1234567890">(480) 332-4077</a>
           </div>
           <div class="contact-item">
-            <h3>LinkedIn</h3>
+            <h3>LinkedIn 💻</h3>
             <a href="https://linkedin.com/in/melissalin128" target="_blank" rel="noopener">linkedin.com/in/melissalin128</a>
           </div>
           <div class="contact-item">
-            <h3>GitHub</h3>
+            <h3>GitHub 👩🏻‍💻</h3>
             <a href="https://github.com/melissalin128" target="_blank" rel="noopener">github.com/melissalin128</a>
           </div>
         </div>

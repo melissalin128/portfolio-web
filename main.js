@@ -125,3 +125,16 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+
+// to add About drawer in navigation pane
+const aboutToggle = document.getElementById("aboutToggle");
+const aboutSubmenu = document.getElementById("aboutSubmenu");
+
+aboutToggle.addEventListener("click", () => {
+  const isExpanded = aboutToggle.getAttribute("aria-expanded") === "true";
+  aboutToggle.setAttribute("aria-expanded", !isExpanded);
+  aboutSubmenu.style.display = isExpanded ? "none" : "flex";
+  aboutSubmenu.setAttribute("aria-hidden", isExpanded);
+});
+
