@@ -724,6 +724,33 @@ footer {
 }
 
 
+/* awards section in background page */
+.award-item {
+  margin-top: 1rem;
+}
+
+.award-item h3 {
+  margin: 0.5rem 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #59a9ff;
+}
+
+.award-item .dates {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.award-description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
 /* add subsections to About in navigation pane */
 .drawer-about-wrapper {
   display: flex;
