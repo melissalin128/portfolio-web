@@ -4,6 +4,7 @@ body {
   background-color: #0e141b; /* background */
   color: #94a3b8;
   font-size: 14px;
+  line-height: 175%;
 }
 
 html {
@@ -61,7 +62,7 @@ nav a {
 
 /* Hamburger button */
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   width: 44px;
@@ -726,7 +727,8 @@ footer {
 
 /* awards section in background page */
 .award-item {
-  margin-top: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .award-item h3 {
@@ -743,9 +745,9 @@ footer {
 }
 
 .award-description {
-  font-size: 0.95rem;
-  color: #555;
+  color: #94a3b8;
   margin-bottom: 0.5rem;
+  line-height: 80%;
 }
 
 
