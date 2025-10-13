@@ -1,6 +1,7 @@
 body {
   font-family: 'Prata', serif;
-  margin: 0;
+  margin: auto;
+  width: 95%;
   background-color: #0e141b; /* background */
   color: #94a3b8;
   font-size: 14px;
