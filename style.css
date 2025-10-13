@@ -471,6 +471,13 @@ footer {
    margin-top: 0.5rem;
  }
 
+ @media (max-width: 600px) {
+  .contact-info {
+    gap: 2rem; /* adds more space between rows on mobile */
+    grid-template-columns: 1fr; /* stack them vertically */
+  }
+}
+
  .contact-item h3 {
    margin: 0 0 0.5rem 0;
    color: #94a3b8;
