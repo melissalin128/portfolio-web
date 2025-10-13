@@ -1,7 +1,6 @@
 body {
   font-family: 'Prata', serif;
   margin: auto;
-  width: 95%;
   background-color: #0e141b; /* background */
   color: #94a3b8;
   font-size: 14px;
@@ -40,6 +39,13 @@ nav a {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid var(--accent, #59a9ff);
+}
+
+@media (max-width: 600px) {
+  .description {
+    white-space: normal;   /* allow wrapping on mobile */
+    word-break: break-word;
+  }
 }
 
 .blink-cursor {
