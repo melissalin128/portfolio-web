@@ -471,12 +471,7 @@ footer {
    margin-top: 0.5rem;
  }
 
- @media (max-width: 600px) {
-  .contact-info {
-    gap: 2rem; /* adds more space between rows on mobile */
-    grid-template-columns: 1fr; /* stack them vertically */
-  }
-}
+
 
  .contact-item h3 {
    margin: 0 0 0.5rem 0;
@@ -487,6 +482,9 @@ footer {
  .contact-item a {
    color: #94bdf4;
    text-decoration: none;
+   display: inline-block;
+   word-break: break-word;
+   overflow-wrap: break-word;
  }
 
  .contact-item a:hover {
