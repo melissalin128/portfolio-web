@@ -78,7 +78,13 @@ nav a {
   cursor: pointer;
   z-index: 2000;
 }
+.hamburger.active span {
+  background-color: #0e141b; /* color when menu is open */
+}
 
+.hamburger span {
+  transition: background-color 0.3s ease;
+}
 
 
 .hamburger span {

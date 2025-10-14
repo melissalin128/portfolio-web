@@ -40,15 +40,17 @@ if (contactForm) {
   function setOpen(isOpen){
     button.setAttribute('aria-expanded', String(isOpen));
     drawer.classList.toggle('open', isOpen);
+  
+    // add/remove active class instead of relying on :active
+    button.classList.toggle('active', isOpen);
+  
     drawer.setAttribute('aria-hidden', String(!isOpen));
     if (isOpen) {
       const firstLink = drawer.querySelector('a');
       if (firstLink) firstLink.focus();
-    } else {
-      // remove focus to reset button color on mobile
-      button.blur();
     }
-  }  
+  }
+  
 
   button.addEventListener('click', () => {
     const isOpen = button.getAttribute('aria-expanded') === 'true';
