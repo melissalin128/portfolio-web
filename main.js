@@ -44,8 +44,11 @@ if (contactForm) {
     if (isOpen) {
       const firstLink = drawer.querySelector('a');
       if (firstLink) firstLink.focus();
+    } else {
+      // remove focus to reset button color on mobile
+      button.blur();
     }
-  }
+  }  
 
   button.addEventListener('click', () => {
     const isOpen = button.getAttribute('aria-expanded') === 'true';
