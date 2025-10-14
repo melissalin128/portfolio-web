@@ -1,3 +1,4 @@
+// Contact form via EmailJS
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   const statusEl = document.getElementById("contactStatus");
@@ -47,46 +48,28 @@ if (contactForm) {
     }
   }
 
+  // Hamburger click
   button.addEventListener('click', () => {
     const isOpen = button.getAttribute('aria-expanded') === 'true';
     setOpen(!isOpen);
   });
 
-  
-
-  drawer.addEventListener('click', (e) => {
-    const target = e.target;
-    if (target && target.tagName === 'A') {
-      setOpen(false);
-    }
+  // Close when clicking links inside the drawer
+  drawer.addEventListener('click', e => {
+    if (e.target.tagName === 'A') setOpen(false);
   });
 
-  drawerBack.addEventListener('click', () => {
-    drawer.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', false); // reset hamburger
-  });
-  
-  window.addEventListener('click', e => {
-    if (e.target === drawer) {
-      drawer.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', false);
-    }
-  });
-  
-
-  // Close with back arrow button inside the drawer
+  // Close with back button inside drawer
   const backBtn = drawer.querySelector('.drawer-back');
   if (backBtn) {
     backBtn.addEventListener('click', () => setOpen(false));
   }
 
-  document.addEventListener('keydown', (e) => {
+  // Close with Escape key
+  document.addEventListener('keydown', e => {
     if (e.key === 'Escape') setOpen(false);
   });
 })();
-
-
-
 
 // Typewriter effect with limited cursor blinking
 (function(){
@@ -97,26 +80,24 @@ if (contactForm) {
   descEl.textContent = '';
   let index = 0;
 
-  // Start cursor blinking
   descEl.classList.add('blink-cursor');
 
   function typeChar() {
     if (index < fullText.length) {
       descEl.textContent += fullText.charAt(index);
       index++;
-      setTimeout(typeChar, 80); // typing speed
+      setTimeout(typeChar, 80);
     } else {
-      // After typing is done, count blinks and stop
       let blinkCount = 0;
       const maxBlinks = 6;
-      const blinkInterval = 800; // must match CSS blink speed (0.8s)
+      const blinkInterval = 800;
 
       const interval = setInterval(() => {
         blinkCount++;
         if (blinkCount >= maxBlinks) {
           clearInterval(interval);
-          descEl.classList.remove('blink-cursor'); // stop blinking
-          descEl.style.borderRight = 'none'; // hide cursor
+          descEl.classList.remove('blink-cursor');
+          descEl.style.borderRight = 'none';
         }
       }, blinkInterval);
     }
@@ -127,10 +108,7 @@ if (contactForm) {
   });
 })();
 
-
-
-
-// motion transition fade in
+// Motion transition fade in
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -138,20 +116,17 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
 document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
-
-// to add About drawer in navigation pane
+// About drawer in navigation pane
 const aboutToggle = document.getElementById("aboutToggle");
 const aboutSubmenu = document.getElementById("aboutSubmenu");
 
-aboutToggle.addEventListener("click", () => {
-  const isExpanded = aboutToggle.getAttribute("aria-expanded") === "true";
-  aboutToggle.setAttribute("aria-expanded", !isExpanded);
-  aboutSubmenu.style.display = isExpanded ? "none" : "flex";
-  aboutSubmenu.setAttribute("aria-hidden", isExpanded);
-});
-
-
-
+if (aboutToggle && aboutSubmenu) {
+  aboutToggle.addEventListener("click", () => {
+    const isExpanded = aboutToggle.getAttribute("aria-expanded") === "true";
+    aboutToggle.setAttribute("aria-expanded", !isExpanded);
+    aboutSubmenu.style.display = isExpanded ? "none" : "flex";
+    aboutSubmenu.setAttribute("aria-hidden", isExpanded);
+  });
+}
