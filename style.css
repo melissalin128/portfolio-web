@@ -65,8 +65,8 @@ nav a {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +76,10 @@ nav a {
   border: 1px solid rgba(148,163,184,0.35);
   border-radius: 8px;
   cursor: pointer;
+  z-index: 2000;
 }
+
+
 
 .hamburger span {
   display: block;
