@@ -52,12 +52,27 @@ if (contactForm) {
     setOpen(!isOpen);
   });
 
+  
+
   drawer.addEventListener('click', (e) => {
     const target = e.target;
     if (target && target.tagName === 'A') {
       setOpen(false);
     }
   });
+
+  drawerBack.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', false); // reset hamburger
+  });
+  
+  window.addEventListener('click', e => {
+    if (e.target === drawer) {
+      drawer.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', false);
+    }
+  });
+  
 
   // Close with back arrow button inside the drawer
   const backBtn = drawer.querySelector('.drawer-back');
