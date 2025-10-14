@@ -398,6 +398,76 @@ footer {
   margin: 0.25rem 0 0.5rem 0;
 }
 
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.7;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+/* The dark background overlay */
+.pdf-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* The box containing the PDF preview */
+.pdf-modal-content {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* The PDF itself */
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close/back button */
+.pdf-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #59a9ff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pdf-close-btn:hover {
+  background: #3a8dd9;
+}
+
+
+
+
+
 /* About layout */
 .about {
   display: grid;
