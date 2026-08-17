@@ -1,0 +1,11 @@
+melissa-lin.vercel.app
+
+
+cd ~/portfolio-web
+npx serve # or pnpm dev 
+# → make edits in VS Code
+# control + c to populate base
+
+git add .
+git commit -m "your message"
+git push
